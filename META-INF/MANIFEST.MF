@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DerivedFilter Plug-in
+Bundle-SymbolicName: DerivedFilter;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: derivedfilter.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jdt.ui,
+ org.eclipse.core.resources;bundle-version="3.4.2",
+ org.eclipse.jdt.core;bundle-version="3.8.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

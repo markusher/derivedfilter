@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.jdt.ui.javaElementFilters">
+      <filter
+            class="derivedfilter.DerivedFilter"
+            description="Hides derived elements"
+            enabled="true"
+            id="org.eclipse.derivedfilter"
+            name="Derived"></filter>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="DerivedFilter.multipleDerived"
+               label="Mark Derived"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="derivedfilter.MarkMultiple"
+            id="DerivedFilter.multipleDerived"
+            name="MarkDerived">
+      </command>
+   </extension>
+
+</plugin>
